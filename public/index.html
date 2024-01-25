@@ -1,0 +1,40 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Login Page -->
+<div id="loginPage">
+  <h1>Login</h1>
+  <form id="loginForm">
+    <input id="username" placeholder="Enter your username" required />
+    <input id="password" type="password" placeholder="Enter your password" required />
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<!-- Chat Page -->
+<div id="chatPage" style="display: none;">
+  <h1>Chat</h1>
+  <ul id="messages"></ul>
+  <form id="messageForm">
+    <input id="message" autocomplete="off" /><button>Send</button>
+  </form>
+  <form id="privateMessageForm">
+    <input id="toUser" placeholder="To user" />
+    <input id="privateMessage" placeholder="Type your private message" />
+    <button type="submit">Send Private Message</button>
+  </form>
+</div>
+
+<script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
